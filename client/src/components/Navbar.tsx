@@ -38,20 +38,75 @@ export function Navbar() {
             </span>
           </div>
 
-          {/* Desktop & Mobile Links (Simple text menu) */}
-          <div className="flex items-center space-x-4 sm:space-x-8">
-            {navLinks.map((link) => (
+          {/* Navigation Links */}
+          <div className="hidden md:flex items-center bg-zinc-900/50 rounded-full px-6 py-1.5 border border-white/10 backdrop-blur-md">
+            <div className="flex items-center space-x-8">
+              {navLinks.map((link) => (
+                <button
+                  key={link.name}
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-xs font-bold text-zinc-400 hover:text-emerald-500 transition-colors uppercase tracking-[0.2em]"
+                >
+                  {link.name}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <button 
+              onClick={() => scrollToSection("#products")}
+              className="hidden sm:block px-5 py-2 bg-emerald-500 hover:bg-emerald-400 text-black text-[10px] font-black rounded-full uppercase tracking-widest transition-all active:scale-95"
+            >
+              Comprar
+            </button>
+            
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
               <button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className="text-[10px] sm:text-sm font-bold text-zinc-400 hover:text-emerald-500 transition-colors uppercase tracking-widest"
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-zinc-400 p-2 hover:text-white transition-colors"
               >
-                {link.name}
+                {isOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
-            ))}
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown (Improved design without full sidebar) */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute top-20 left-4 right-4 md:hidden"
+          >
+            <div className="bg-zinc-950 border border-white/10 rounded-2xl p-4 shadow-2xl backdrop-blur-xl">
+              <div className="flex flex-col gap-1">
+                {navLinks.map((link) => (
+                  <button
+                    key={link.name}
+                    onClick={() => scrollToSection(link.href)}
+                    className="flex items-center w-full px-4 py-3 text-sm font-bold text-zinc-300 hover:bg-emerald-500/10 hover:text-emerald-500 rounded-xl transition-all uppercase tracking-widest"
+                  >
+                    {link.name}
+                  </button>
+                ))}
+                <div className="mt-2 pt-2 border-t border-white/5">
+                  <button 
+                    onClick={() => scrollToSection("#products")}
+                    className="w-full py-4 bg-emerald-500 text-black font-black rounded-xl uppercase tracking-widest text-xs transition-all active:scale-[0.98]"
+                  >
+                    Comprar Agora
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
