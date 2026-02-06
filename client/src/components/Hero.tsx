@@ -7,7 +7,7 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black pt-20">
+    <section id="hero" className="relative min-h-screen lg:min-h-[90vh] flex items-center justify-center overflow-hidden bg-black pt-20">
       {/* Background Gradient & Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-900/30 via-black to-black opacity-60" />
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay" />
@@ -33,36 +33,36 @@ export function Hero() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center lg:text-left"
+          className="text-center lg:text-left flex flex-col items-center lg:items-start"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
             <Zap className="w-4 h-4 text-yellow-400 fill-yellow-400" />
             <span className="text-sm font-semibold text-white tracking-wide">Potencialize seu treino</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] mb-6 tracking-tighter">
+          <h1 className="text-4xl xs:text-5xl md:text-7xl font-black text-white leading-tight mb-8 tracking-tighter">
             TRANSFORME SEU <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-green-600">
               CORPO HOJE
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          <p className="text-base md:text-xl text-zinc-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed px-4 lg:px-0">
             Suplementos de alta performance para quem busca resultados reais. 
             Energia, força e recuperação em cada dose.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div className="flex flex-col gap-4 w-full max-w-xs sm:max-w-md sm:flex-row justify-center lg:justify-start px-4 lg:px-0">
             <button 
               onClick={scrollToProducts}
-              className="group px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-full transition-all shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] flex items-center justify-center gap-2"
+              className="group px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-full transition-all shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] flex items-center justify-center gap-2 text-lg"
             >
               Comprar Agora
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button 
               onClick={() => document.getElementById("benefits")?.scrollIntoView({ behavior: "smooth" })}
-              className="px-8 py-4 bg-transparent border-2 border-white/10 hover:border-white/30 text-white font-bold rounded-full transition-all hover:bg-white/5"
+              className="px-8 py-4 bg-transparent border-2 border-white/10 hover:border-white/30 text-white font-bold rounded-full transition-all hover:bg-white/5 text-lg"
             >
               Saiba Mais
             </button>

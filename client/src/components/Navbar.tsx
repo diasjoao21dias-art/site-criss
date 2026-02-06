@@ -30,11 +30,11 @@ export function Navbar() {
             className="flex items-center gap-2 cursor-pointer group" 
             onClick={() => scrollToSection("#hero")}
           >
-            <div className="bg-gradient-to-br from-green-400 to-emerald-600 p-2 rounded-lg group-hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-shadow duration-300">
-              <Dumbbell className="h-6 w-6 text-white" />
+            <div className="bg-emerald-500/20 p-2 rounded-lg group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-all duration-300">
+              <Dumbbell className="h-6 w-6 text-emerald-500" />
             </div>
-            <span className="text-xl font-bold tracking-tighter uppercase">
-              Nutri<span className="text-gradient">GlowUp</span>
+            <span className="text-xl font-bold tracking-tighter uppercase text-white">
+              Nutri<span className="text-emerald-500">GlowUp</span>
             </span>
           </div>
 
