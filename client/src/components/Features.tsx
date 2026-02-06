@@ -27,7 +27,7 @@ export function Features() {
   ];
 
   return (
-    <section id="features" className="py-24 bg-zinc-950 relative overflow-hidden">
+    <section id="features" className="py-24 bg-zinc-950 relative overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading 
           title="Por que escolher a Nutri Glow Up?" 

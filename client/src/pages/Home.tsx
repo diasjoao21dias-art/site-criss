@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
+import { Benefits } from "@/components/Benefits";
 import { Footer } from "@/components/Footer";
 import { ProductCard } from "@/components/ProductCard";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -53,6 +54,7 @@ export default function Home() {
           </div>
         </section>
 
+        <Benefits />
         <Features />
 
         {/* About Section */}

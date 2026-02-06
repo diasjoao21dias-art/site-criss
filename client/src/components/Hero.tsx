@@ -61,7 +61,7 @@ export function Hero() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button 
-              onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => document.getElementById("benefits")?.scrollIntoView({ behavior: "smooth" })}
               className="px-8 py-4 bg-transparent border-2 border-white/10 hover:border-white/30 text-white font-bold rounded-full transition-all hover:bg-white/5"
             >
               Saiba Mais
