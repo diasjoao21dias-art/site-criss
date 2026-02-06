@@ -34,11 +34,24 @@ export function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6 text-lg">Links Rápidos</h4>
             <ul className="space-y-4">
-              {['Início', 'Produtos', 'Benefícios', 'Sobre Nós'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-zinc-400 hover:text-primary transition-colors">
-                    {item}
-                  </a>
+              {[
+                { name: 'Início', href: '#hero' },
+                { name: 'Produtos', href: '#products' },
+                { name: 'Benefícios', href: '#features' },
+                { name: 'Sobre Nós', href: '#about' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <button 
+                    onClick={() => {
+                      const element = document.querySelector(item.href);
+                      if (element) {
+                        element.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
+                    className="text-zinc-400 hover:text-primary transition-colors text-left"
+                  >
+                    {item.name}
+                  </button>
                 </li>
               ))}
             </ul>
