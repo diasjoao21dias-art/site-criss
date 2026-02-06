@@ -46,7 +46,7 @@ export default function Home() {
                  <p>Nenhum produto disponível no momento.</p>
                </div>
             ) : (
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
                 {products?.map((product, index) => (
                   <ProductCard key={product.id} product={product} index={index} />
                 ))}

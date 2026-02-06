@@ -66,24 +66,51 @@ export function Navbar() {
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-zinc-900 border-b border-white/5"
-          >
-            <div className="px-4 pt-2 pb-6 space-y-2">
-              {navLinks.map((link) => (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
+            />
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-zinc-950 z-50 md:hidden shadow-2xl border-l border-white/5 flex flex-col"
+            >
+              <div className="p-6 flex items-center justify-between border-b border-white/5">
+                <span className="text-lg font-bold text-white">Menu</span>
                 <button
-                  key={link.name}
-                  onClick={() => scrollToSection(link.href)}
-                  className="block w-full text-left px-3 py-3 text-base font-medium text-foreground hover:bg-white/5 hover:text-primary rounded-lg transition-colors"
+                  onClick={() => setIsOpen(false)}
+                  className="p-2 text-zinc-400 hover:text-white transition-colors"
                 >
-                  {link.name}
+                  <X size={24} />
                 </button>
-              ))}
-            </div>
-          </motion.div>
+              </div>
+              <div className="px-4 py-8 flex flex-col gap-2 overflow-y-auto flex-1">
+                {navLinks.map((link) => (
+                  <button
+                    key={link.name}
+                    onClick={() => scrollToSection(link.href)}
+                    className="flex items-center w-full px-6 py-4 text-xl font-bold text-white hover:bg-emerald-500/10 hover:text-emerald-500 rounded-xl transition-all"
+                  >
+                    {link.name}
+                  </button>
+                ))}
+              </div>
+              <div className="p-8 border-t border-white/5">
+                <button 
+                  onClick={() => scrollToSection("#products")}
+                  className="w-full py-4 bg-emerald-500 text-black font-black rounded-full uppercase tracking-widest"
+                >
+                  Comprar Agora
+                </button>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>
