@@ -8,6 +8,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { useProducts } from "@/hooks/use-products";
 import { Loader2, AlertCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { type Product } from "@shared/schema";
 
 export default function Home() {
   const { data: products, isLoading, error } = useProducts();
