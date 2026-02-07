@@ -38,7 +38,7 @@ export class MemStorage implements IStorage {
         name: "Pre-Workout Ignite",
         description: "Energia explosiva e foco mental para seus treinos mais intensos.",
         price: "R$ 149,90",
-        imageUrl: "https://images.unsplash.com/photo-1627483297886-49710ae1fc28?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+        imageUrl: "https://images.unsplash.com/photo-1594498653385-d5172c532c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         paymentLink: "#",
         category: "Energia"
       },
@@ -46,7 +46,7 @@ export class MemStorage implements IStorage {
         name: "BCAA Energy 2:1:1",
         description: "Recuperação intra-treino com aminoácidos essenciais e eletrólitos.",
         price: "R$ 79,90",
-        imageUrl: "https://images.unsplash.com/photo-1546483875-ad9014c88eba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+        imageUrl: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         paymentLink: "#",
         category: "Recuperação"
       },
@@ -62,7 +62,7 @@ export class MemStorage implements IStorage {
         name: "Omega 3 Gold",
         description: "Óleo de peixe ultra refinado, rico em EPA e DHA para saúde cardiovascular.",
         price: "R$ 69,90",
-        imageUrl: "https://images.unsplash.com/photo-1610725664338-23c6b7696144?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+        imageUrl: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         paymentLink: "#",
         category: "Saúde"
       }
