@@ -25,16 +25,16 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <div 
             className="flex items-center gap-2 cursor-pointer group" 
             onClick={() => scrollToSection("#hero")}
           >
             <div className="p-1 rounded-lg group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-all duration-300">
-              <img src={logoImg} alt="Nutri Glow Up Logo" className="h-12 w-auto object-contain" />
+              <img src={logoImg} alt="Nutri Glow Up Logo" className="h-16 w-auto object-contain" />
             </div>
-            <span className="text-xl font-bold tracking-tighter uppercase text-white">
+            <span className="text-2xl font-bold tracking-tighter uppercase text-white">
               Nutri<span className="text-emerald-500">GlowUp</span>
             </span>
           </div>
