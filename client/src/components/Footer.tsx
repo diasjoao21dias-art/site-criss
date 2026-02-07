@@ -9,7 +9,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-6 cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <div className="p-1 rounded-lg group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-all duration-300">
-                <img src={logoImg} alt="Nutri Glow Up Logo" className="h-12 w-auto object-contain" />
+                <img src={logoImg} alt="Nutri Glow Up Logo" className="h-16 w-auto object-contain" />
               </div>
               <span className="text-2xl font-bold tracking-tighter text-white uppercase">
                 Nutri<span className="text-emerald-500">GlowUp</span>
