@@ -7,7 +7,7 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen lg:min-h-[90vh] flex items-center justify-center overflow-hidden bg-black pt-20">
+    <section id="hero" className="relative min-h-screen lg:min-h-[90vh] flex items-center justify-center overflow-x-hidden bg-black pt-20">
       {/* Background Gradient & Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-900/30 via-black to-black opacity-60" />
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay" />
@@ -17,12 +17,12 @@ export function Hero() {
         <motion.div 
           animate={{ y: [0, -20, 0], opacity: [0.3, 0.6, 0.3] }} 
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 left-10 w-64 h-64 bg-primary/20 rounded-full blur-[100px]" 
+          className="absolute top-1/4 left-1/10 w-64 h-64 bg-primary/20 rounded-full blur-[100px]" 
         />
         <motion.div 
           animate={{ y: [0, 30, 0], opacity: [0.2, 0.5, 0.2] }} 
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute bottom-1/4 right-10 w-96 h-96 bg-emerald-600/10 rounded-full blur-[120px]" 
+          className="absolute bottom-1/4 right-1/10 w-96 h-96 bg-emerald-600/10 rounded-full blur-[120px]" 
         />
       </div>
 
@@ -40,8 +40,8 @@ export function Hero() {
             <span className="text-sm font-semibold text-white tracking-wide">Potencialize seu treino</span>
           </div>
           
-          <h1 className="text-4xl xs:text-5xl md:text-7xl font-black text-white leading-tight mb-8 tracking-tighter">
-            TRANSFORME SEU <br />
+          <h1 className="text-4xl xs:text-5xl md:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tighter">
+            TRANSFORME SEU <br className="hidden xs:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-green-600">
               CORPO HOJE
             </span>
