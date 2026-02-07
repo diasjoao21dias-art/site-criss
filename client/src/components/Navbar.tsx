@@ -41,7 +41,7 @@ export function Navbar() {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden items-center bg-zinc-900/50 rounded-full px-6 py-1.5 border border-white/10 backdrop-blur-md">
+          <div className="hidden md:flex items-center bg-zinc-900/50 rounded-full px-6 py-1.5 border border-white/10 backdrop-blur-md">
             <div className="flex items-center space-x-8">
               {navLinks.map((link) => (
                 <button
@@ -59,14 +59,14 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <button 
               onClick={() => scrollToSection("#products")}
-              className="hidden px-5 py-2 bg-emerald-500 hover:bg-emerald-400 text-black text-[10px] font-black rounded-full uppercase tracking-widest transition-all active:scale-95"
+              className="hidden sm:block px-5 py-2 bg-emerald-500 hover:bg-emerald-400 text-black text-[10px] font-black rounded-full uppercase tracking-widest transition-all active:scale-95"
               data-testid="button-buy-desktop"
             >
               Comprar
             </button>
             
             {/* Mobile Menu Button */}
-            <div className="">
+            <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-zinc-400 p-2 hover:text-white transition-colors"
@@ -86,7 +86,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="absolute top-20 left-4 right-4"
+            className="absolute top-20 left-4 right-4 md:hidden"
           >
             <div className="bg-zinc-950 border border-white/10 rounded-2xl p-4 shadow-2xl backdrop-blur-xl">
               <div className="flex flex-col gap-1">

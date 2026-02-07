@@ -17,7 +17,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      <main>
+      <main className="overflow-x-hidden">
         <Hero />
         
         {/* Products Section */}
