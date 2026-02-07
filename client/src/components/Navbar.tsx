@@ -30,11 +30,12 @@ export function Navbar() {
           <div 
             className="flex items-center gap-2 md:gap-4 cursor-pointer group flex-shrink-0" 
             onClick={() => scrollToSection("#hero")}
+            data-testid="link-logo"
           >
             <div className="p-1 rounded-lg group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-all duration-300">
-              <img src={logoImg} alt="Nutri Glow Up Logo" className="h-12 xs:h-16 md:h-20 lg:h-24 w-auto object-contain" />
+              <img src={logoImg} alt="Nutri Glow Up Logo" className="h-14 sm:h-18 md:h-20 lg:h-24 w-auto object-contain" />
             </div>
-            <span className="text-lg xs:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter uppercase text-white truncate max-w-[150px] xs:max-w-none">
+            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter uppercase text-white whitespace-nowrap">
               Nutri<span className="text-emerald-500">GlowUp</span>
             </span>
           </div>
@@ -47,6 +48,7 @@ export function Navbar() {
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
                   className="text-xs font-bold text-zinc-400 hover:text-emerald-500 transition-colors uppercase tracking-[0.2em]"
+                  data-testid={`link-nav-${link.name.toLowerCase()}`}
                 >
                   {link.name}
                 </button>
@@ -58,6 +60,7 @@ export function Navbar() {
             <button 
               onClick={() => scrollToSection("#products")}
               className="hidden sm:block px-5 py-2 bg-emerald-500 hover:bg-emerald-400 text-black text-[10px] font-black rounded-full uppercase tracking-widest transition-all active:scale-95"
+              data-testid="button-buy-desktop"
             >
               Comprar
             </button>
@@ -67,6 +70,7 @@ export function Navbar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-zinc-400 p-2 hover:text-white transition-colors"
+                data-testid="button-menu-toggle"
               >
                 {isOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
@@ -91,6 +95,7 @@ export function Navbar() {
                     key={link.name}
                     onClick={() => scrollToSection(link.href)}
                     className="flex items-center w-full px-4 py-3 text-sm font-bold text-zinc-300 hover:bg-emerald-500/10 hover:text-emerald-500 rounded-xl transition-all uppercase tracking-widest"
+                    data-testid={`link-mobile-nav-${link.name.toLowerCase()}`}
                   >
                     {link.name}
                   </button>
@@ -99,6 +104,7 @@ export function Navbar() {
                   <button 
                     onClick={() => scrollToSection("#products")}
                     className="w-full py-4 bg-emerald-500 text-black font-black rounded-xl uppercase tracking-widest text-xs transition-all active:scale-[0.98]"
+                    data-testid="button-buy-mobile"
                   >
                     Comprar Agora
                   </button>
